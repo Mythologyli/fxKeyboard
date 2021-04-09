@@ -27,6 +27,8 @@ extern const unsigned int sc28D[4];
 // int Comm_Open(unsigned short parameters)
 // If parameters ANDed with 0xF0 is 0x20, the USB communication channel will be opened,
 // else syscall 0x02AB (Serial_Open) is called with parameters.
+// 0 if successful
+// 3 if already open
 #define Comm_Open (*(sc_Comm_Open)sc28D)
 
 
