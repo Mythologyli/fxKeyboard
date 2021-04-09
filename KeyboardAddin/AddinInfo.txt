@@ -1,0 +1,12 @@
+//------------------------------------------------------------------
+// Addin-Application header control file, created with the CASIO SDK
+//------------------------------------------------------------------
+[OUTPUT]     : "KEYBOARD.G1A"
+[BINDATA]    : "FXADDINror.bin"
+[DISPNAME]   : "KEYBOARD"
+[APPNAME]    : "@KEYBOAR"
+[VERSION]    : "00.10.0000"
+[APL_ICON]   : "MainIcon.bmp"
+[MODULE_NUM] : 0
+[MOD1_TITLE] : "KEYBOARD"
+[MOD1_ICON]  : "eActivityIcon.bmp"

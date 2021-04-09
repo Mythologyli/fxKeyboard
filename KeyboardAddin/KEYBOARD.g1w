@@ -1,0 +1,15 @@
+[DLSimProject]
+Name=KEYBOARD
+Version=00.10
+Model=:fx-9860G.dlm
+SourcePath=SRC
+MemoryPath=INIT
+MemCardPath=SDCard
+
+[Program1]
+Program=KEYBOARD.G1A
+Debug=Debug\FXADDINror.dbg
+LoadAddress=80000000:90100000
+
+[Files]
+SourceFile=:main.cpp

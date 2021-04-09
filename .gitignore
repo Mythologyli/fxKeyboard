@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+# Folders
+KeyboardAddin/Debug
+KeyboardAddin/INIT
+KeyboardAddin/SDCard
+.vscode
+
+# Other files
+*.G1A
+*.bat
+*.dlw
+*.dlr
