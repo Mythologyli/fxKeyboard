@@ -6,13 +6,21 @@ extern "C"
 
 #include <fxlib.h>
 
+#include "log.h"
+#include "syscall.h"
+
+
+Log log;
+
 
 int AddIn_main(int isAppli, unsigned short OptionNum)
 {
     unsigned int key;
 
-    Bdisp_AllClr_DDVRAM();
+    log.Init();
 
+    log.PrintLn((const unsigned char*)"fxKeyboard v0.1");
+    log.PrintLn((const unsigned char*)"Copyright 2021 Myth");
 
     while(1)
     {

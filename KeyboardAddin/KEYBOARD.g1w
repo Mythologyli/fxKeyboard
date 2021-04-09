@@ -13,3 +13,7 @@ LoadAddress=80000000:90100000
 
 [Files]
 SourceFile=:main.cpp
+SourceFile=:syscall.cpp
+SourceFile=:log.cpp
+HeaderFile=:syscall.h
+HeaderFile=:log.h
