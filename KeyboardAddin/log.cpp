@@ -33,15 +33,11 @@ void Log::Init(void)
 void Log::Print(void)
 {
     if (cursor_y > 8)
-    {
         Clear();
-    }
     else if (cursor_x == 1)
-    {
         locate(cursor_x, cursor_y);
 
-        cursor_x = 0;
-    }
+    cursor_x = 0;
 
     ::Print((const unsigned char*)" ");
 
@@ -53,15 +49,11 @@ void Log::Print(void)
 void Log::Print(unsigned char uch)
 {
     if (cursor_y > 8)
-    {
         Clear();
-    }
     else if (cursor_x == 1)
-    {
         locate(cursor_x, cursor_y);
 
-        cursor_x = 0;
-    }
+    cursor_x = 0;
 
     // change uch to uch_ustr
     unsigned char uch_ustr[2] = {'\0', '\0'};
@@ -77,15 +69,11 @@ void Log::Print(unsigned char uch)
 void Log::Print(const unsigned char* ustr)
 {
     if (cursor_y > 8)
-    {
         Clear();
-    }
     else if (cursor_x == 1)
-    {
         locate(cursor_x, cursor_y);
 
-        cursor_x = 0;
-    }
+    cursor_x = 0;
 
     ::Print(ustr);
 
@@ -93,19 +81,15 @@ void Log::Print(const unsigned char* ustr)
 }
 
 
-// Print int .
+// Print int.
 void Log::Print(int num)
 {
     if (cursor_y > 8)
-    {
         Clear();
-    }
     else if (cursor_x == 1)
-    {
         locate(cursor_x, cursor_y);
 
-        cursor_x = 0;
-    }
+    cursor_x = 0;
     
     // change num to num_ustr
     unsigned char num_ustr[12];
