@@ -32,7 +32,7 @@ USB::USB()
 // -1 : port already open
 int USB::Init(void)
 {
-    if (!Comm_Open(0x20))
+    if (Comm_Open(0x20) == 0)
     {
         #ifdef DEBUG_USB
         log.PrintLn((const unsigned char*)"#Port open!");

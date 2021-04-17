@@ -14,7 +14,7 @@ extern "C"
 #endif
 
 
-// Length of unsigned str.
+// Length of unsigned str. Max 256 bytes.
 int uStrLen(const unsigned char* ustr);
 
 

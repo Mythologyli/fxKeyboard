@@ -44,6 +44,8 @@ void QuitHandler(void)
 
     usb.Close(); // close the port before quit
 
+    Bdisp_AllClr_DDVRAM();
+
     PopUpWin(1);
     locate(4, 4);
     Print((const unsigned char*)"Close USB Port!");

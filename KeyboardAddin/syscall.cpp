@@ -14,6 +14,7 @@ extern "C"
 
 
 // syscall related
+const unsigned int sc247[4] = {SCA, SCB, SCE, 0x247};
 const unsigned int sc28D[4] = {SCA, SCB, SCE, 0x28D};
 const unsigned int sc28E[4] = {SCA, SCB, SCE, 0x28E};
 const unsigned int sc28F[4] = {SCA, SCB, SCE, 0x28F};

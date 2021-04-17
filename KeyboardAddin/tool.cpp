@@ -13,7 +13,7 @@ extern "C"
 #include "tool.h"
 
 
-// Length of unsigned str.
+// Length of unsigned str. Max 256 bytes.
 // Return
 // -1 : input NULL
 // -2 : no \0 in 256 bytes
@@ -28,7 +28,7 @@ int uStrLen(const unsigned char* ustr)
     {
         if (ustr[i] == '\0')
             break;
-        else if (i > 256)
+        else if (i == 256)
         {
             i = -2;
             break;
