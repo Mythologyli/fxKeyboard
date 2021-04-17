@@ -16,7 +16,11 @@ extern "C"
 #include "log.h"
 
 
-Log::Log() : cursor_x(1), cursor_y(1)
+int Log::cursor_x = 1;
+int Log::cursor_y = 1;
+
+
+Log::Log()
 {
     
 }

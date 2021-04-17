@@ -19,10 +19,7 @@ class SendKey
 public:
     SendKey();
 
-    void Send(void); // Send pressed key by usb port.
-
-private:
-    
+    static void Send(void); // Send pressed key by usb port.
 };
 
 

@@ -19,23 +19,23 @@ class Log
 public:
     Log();
 
-    void Init(void); // Must call this function in main function once!
+    static void Init(void); // Must call this function in main function once!
 
-    void Print(void); // Print space.
-    void Print(unsigned char uch); // Print uch.
-    void Print(const unsigned char* ustr); // Print ustr.
-    void Print(int num); // Print int.
+    static void Print(void); // Print space.
+    static void Print(unsigned char uch); // Print uch.
+    static void Print(const unsigned char* ustr); // Print ustr.
+    static void Print(int num); // Print int.
 
-    void PrintLn(void); // Print a blank line.
-    void PrintLn(unsigned char uch); // Print uch with a new line.
-    void PrintLn(const unsigned char* ustr); // Print ustr with a new line.
-    void PrintLn(int num); // Print int with a new line.
+    static void PrintLn(void); // Print a blank line.
+    static void PrintLn(unsigned char uch); // Print uch with a new line.
+    static void PrintLn(const unsigned char* ustr); // Print ustr with a new line.
+    static void PrintLn(int num); // Print int with a new line.
     
-    void Clear(void); // Clear the screen and reset line position.
+    static void Clear(void); // Clear the screen and reset line position.
 
 private:
-    int cursor_x;
-    int cursor_y;
+    static int cursor_x;
+    static int cursor_y;
 };
 
 

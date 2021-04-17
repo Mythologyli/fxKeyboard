@@ -23,16 +23,16 @@ class USB
 public:
     USB();
 
-    int Init(void); // Try to open the usb port.
+    static int Init(void); // Try to open the usb port.
 
-    int Send(unsigned char* ustr); // Send ustr to usb port.
+    static int Send(unsigned char* ustr); // Send ustr to usb port.
 
-    void ClearSendBuffer(void); // Clear send buffer.
+    static void ClearSendBuffer(void); // Clear send buffer.
     
-    void Close(void); // Close the usb port.
+    static void Close(void); // Close the usb port.
 
 private:
-    
+    static void ForceExit(void); // Force exit.
 };
 
 

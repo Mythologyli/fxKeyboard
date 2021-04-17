@@ -10,6 +10,9 @@ extern "C"
 #endif
 
 
+#include <fxlib.h>
+#include <timer.h>
+
 #include "tool.h"
 #include "syscall.h"
 #include "usb.h"
@@ -32,8 +35,18 @@ USB::USB()
 // -1 : port already open
 int USB::Init(void)
 {
+    // If the cable not connected, the program would stuck in Comm_Open.
+    // This timer is used to force exit.
+    SetTimer(ID_USER_TIMER1, 2000, ForceExit);
+
+    #ifdef DEBUG_USB
+    log.PrintLn((const unsigned char*)"#Linking...");
+    #endif
+    
     if (Comm_Open(0x20) == 0)
     {
+        KillTimer(ID_USER_TIMER1);
+        
         #ifdef DEBUG_USB
         log.PrintLn((const unsigned char*)"#Port open!");
         #endif
@@ -44,6 +57,8 @@ int USB::Init(void)
     }
     else 
     {
+        KillTimer(ID_USER_TIMER1);
+        
         #ifdef DEBUG_USB
         log.PrintLn((const unsigned char*)"#Port already open!");
         #endif
@@ -112,6 +127,20 @@ void USB::Close(void)
     #ifdef DEBUG_USB
     log.PrintLn((const unsigned char*)"#Port close!");
     #endif
+}
+
+
+// Force exit.
+// Called by timer.
+void USB::ForceExit(void)
+{
+    log.PrintLn((const unsigned char*)"#Link error!");
+    log.PrintLn((const unsigned char*)"#Use [MENU] to exit.");
+
+    unsigned int key;
+
+    while (1)
+        GetKey(&key);
 }
 
 
