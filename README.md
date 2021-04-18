@@ -1,6 +1,6 @@
 # fxKeyboard
 
-Use fx-9860 series calculator as a keybord for computer.
+Use fx-9860 series calculator as a keyboard for computer.
 
 **WARNING: THIS TOOL MAY DAMAGE YOUR CALCULATOR OR COMPUTER. ALWAYS FOLLOW THE DOC AND I WILL NOT BE RESPONSIBLE FOR ANY DAMAGE.**
 
@@ -10,7 +10,7 @@ Use fx-9860 series calculator as a keybord for computer.
 + Use the LINK app in calcutor menu to connect the calculator to your computer.
 + *READ NOTICE BEFORE THIS STEP!* Download Zadig from [here](https://zadig.akeo.ie/). Open Zadig, click Options - List All Device, select CESG502, and replace the original driver with WinUSB.
 + Open the Add-in in your calculator. It will automatically connect to your computer. If you didn't plug the USB cable, it will exit after a short time.
-+ Open the fxKeyboardLink software in your computer. Now you can use your calculator as a keybord for your computer.
++ Open the fxKeyboardLink software in your computer. Now you can use your calculator as a keyboard for your computer.
 + Some special keyboard mapping:
 
   | Calculator Key | Computer |
@@ -29,7 +29,7 @@ Use fx-9860 series calculator as a keybord for computer.
   | DEL | Backspace |
   | INS | Insert |
   | ÷ | / |
-  | π | pi |
+  | π | Text: pi |
   | EXE | Enter in arrow mode and click in cursor mode
   | EXE with SHIFT | Enter with Shift pressed. This is convenient for using Mathmetica
 
