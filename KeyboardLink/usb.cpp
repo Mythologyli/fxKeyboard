@@ -54,7 +54,7 @@ int USB::Connect(void)
     if (device == NULL)
         return -1;
 
-    switch (int a = libusb_open(device, &device_handle))
+    switch (libusb_open(device, &device_handle))
     {
     case LIBUSB_SUCCESS: // success
     {
